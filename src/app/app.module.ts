@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -9,16 +10,19 @@ import { ProtectedComponent } from './protected/protected.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
+import { CallApiComponent } from './call-api/call-api.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProtectedComponent,
-    AuthCallbackComponent
+    AuthCallbackComponent,
+    CallApiComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [AuthGuardService, AuthService],
   bootstrap: [AppComponent]
