@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ProtectedComponent } from './protected/protected.component';
+import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
+
 import { AuthGuardService } from './services/auth-guard.service';
+
 
 const routes: Routes = [
   {
@@ -13,7 +16,11 @@ const routes: Routes = [
     path: 'protected',
     component: ProtectedComponent,
     canActivate: [AuthGuardService]
-  }
+  },
+  {
+    path: 'auth-callback',
+    component: AuthCallbackComponent
+  }  
 ];
 
 @NgModule({
