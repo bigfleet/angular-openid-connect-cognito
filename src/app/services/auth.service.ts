@@ -43,7 +43,7 @@ export function getClientSettings(): UserManagerSettings {
         client_id: '2tsbab02uktn1je2cd9mc2fmci',
         redirect_uri: 'http://localhost:4200/auth-callback',
         post_logout_redirect_uri: 'http://localhost:4200/',
-        response_type:"code",
+        response_type:"token",
         scope:"openid profile",
         filterProtocolClaims: true,
         loadUserInfo: true
